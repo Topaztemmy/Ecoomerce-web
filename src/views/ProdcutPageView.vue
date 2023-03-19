@@ -1,19 +1,20 @@
 
 <script lang="ts">
-import userStore from '@/store'
 import { useQuery } from '@tanstack/vue-query'
-import { ProductData } from '@/types';
 import { defineComponent, ref, reactive} from 'vue';
 import axios from 'axios';
-import path from 'path';
+import { useRouter } from 'vue-router';
 
 
     export default defineComponent({
-  name: 'PostDetails',
+  name: 'products',
 
   setup() {
-    
-
+        const router = useRouter()
+        const goHomePage = () =>{
+            router.push('./')
+        }
+        return {goHomePage}
   },
 
   data(){
@@ -28,13 +29,12 @@ import path from 'path';
             brand: string,
             images: string[]
               }[],
-        path: "https://dummyjson.com/products"
+        
     }
    
   },
   async mounted (){
     let result =  await axios.get('https://dummyjson.com/products')
-    console.warn (result.data.products)
     this.Items = result.data.products
 
  }
@@ -50,9 +50,10 @@ import path from 'path';
     </div>
     
     <div v-for="item in Items" :key="item.id">
-       <p v-for="picture in item.images" :key="picture" > <img src="path + '/images/Items/' + picture " alt=""></p>
+      
         <div>{{ item.title }}</div>
     </div>
+    <button @click="goHomePage">Return to home page</button>
 </div>
     
 </template>

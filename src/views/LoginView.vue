@@ -1,11 +1,10 @@
 <script lang="ts">
 import { defineComponent, onMounted, reactive, ref } from 'vue'
-import { ProductData } from '@/types';
 import useVuelidate from '@vuelidate/core'
 import { required, email, minLength } from '@vuelidate/validators'
 import axios from 'axios'
-import userStore from '@/store'
-import router from '@/routes/router';
+import userStore from '../store'
+
 
 export default defineComponent({
     setup () {
