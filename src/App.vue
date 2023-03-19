@@ -16,10 +16,8 @@ import userStore from '@/store'
     </div>
     <div class="flex flex-row justify-between gap-4 ">
    <RouterLink class="text-white hover:text-lg" to="/">Home</RouterLink>
-   <RouterLink class="text-white hover:text-lg"  to="/products">Products</RouterLink>
    <RouterLink class="text-white hover:text-lg"  to="/login">Log in</RouterLink>
    <RouterLink class="text-white hover:text-lg" to="/signin">Sign in</RouterLink>
-   <RouterLink class="text-white hover:text-lg" to="/*">Not Found</RouterLink>
   </div>
   </nav>
   
