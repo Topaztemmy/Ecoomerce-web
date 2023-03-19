@@ -14,7 +14,7 @@ export default defineComponent({
 <template class="h-screen w-fullbg-slate-300">
     <navigation />
   <RouterView />
-  <homePageVue />
+ 
 </template>
 
 <style scoped>
