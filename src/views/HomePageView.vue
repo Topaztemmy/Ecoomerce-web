@@ -11,7 +11,7 @@
             
         </div>
         <div class="">
-           <div>Click <a class="text-lime-500">here</a> to</div> <div>BUY NOW</div>
+           <div>Click <a href="/login" class="text-lime-500">here</a> to</div> <div>BUY NOW</div>
         </div>
         </div>
         <div>

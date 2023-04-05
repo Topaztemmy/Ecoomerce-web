@@ -50,6 +50,9 @@ import { useRouter } from 'vue-router';
     </div>
     
     <div v-for="item in Items" :key="item.id">
+        <div v-for="(image, imageIndex) in item.images" :key="imageIndex">
+            <img :src="image[1]" alt="" >
+        </div>
       
         <div>{{ item.title }}</div>
     </div>
